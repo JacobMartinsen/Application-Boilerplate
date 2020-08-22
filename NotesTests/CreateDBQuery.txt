@@ -1,0 +1,9 @@
+﻿USE [master]
+IF NOT EXISTS 
+   (
+     SELECT name FROM master.dbo.sysdatabases 
+     WHERE name = N'NotesDB'
+    )
+CREATE DATABASE NotesDB;
+
+--assumes TestUser login exits 
